@@ -10,6 +10,7 @@ git clone https://github.com/Mootikins/FreeplayILI9341
 cd FreeplayILI9341
 ./install.sh
 ```
+This will open a menu then select your hardware to install the appropriate display drivers.
 
 To Uninstall:
 ```
@@ -143,6 +144,8 @@ These are the systemctl service definitions that provide information to the oper
 * fbcpBPCroppedNoSleep.service
 * fbcpFilled.service
 * fbcpFilledNoSleep.service
+* fbcpCM4Filled.service
+* fbcpCM4FilledNoSleep.service
 * fbcpZero.service
 * fbcpZeroNoDMA.service
 * fbcpOld.service
@@ -156,6 +159,7 @@ These are the systemctl service definitions that provide information to the oper
 * fbcpZero.sh : init.d script that handle start, stop, status, restart, reload, force-reload
 * install.sh : main install script (run this first)
 * installCM3.sh : install script - this is a selectable item in the install.sh script
+* installCM4.sh : install script - this is a selectable item in the install.sh script
 * installZero.sh : install script - this is a selectable item in the install.sh script
 * uninstall.sh : uninstall script - this is a selectable item in the install.sh script
 
