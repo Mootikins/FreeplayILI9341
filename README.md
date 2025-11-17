@@ -126,6 +126,15 @@ Edit to config.h commenting with a '//' at beginning of the line for these Defin
   DISPLAY_FLIP_ORIENTATION_IN_SOFTWARE
   SAVE_BATTERY_BY_SLEEPING_WHEN_IDLE
 ```
+change this line:
+```
+#define DISPLAY_CONSIDERED_INACTIVE_PERCENTAGE (5.0 / 100.0)
+```
+to this:
+```
+#define DISPLAY_CONSIDERED_INACTIVE_PERCENTAGE (1.0 / 100.0)
+```
+
 compiled with these parameters
 note: SPI_BUS_CLOCK_DIVISOR of 8 works best with the regular clock of 500 from the CM4 and CM4S
 ```
