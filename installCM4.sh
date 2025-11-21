@@ -2,6 +2,10 @@
 
 stop_all_running_services ()
 {
+    # only stop the services that are running
+    # for loop
+	# systemctl --type=service --state=running | grep fbcp
+	
 	sudo service fbcp stop
 	sudo systemctl stop fbcpOld.service
 	sudo systemctl stop fbcpCropped.service
@@ -37,6 +41,7 @@ sudo cp $INSTALL_DIR/fbcpCM4Filled.service /lib/systemd/system/fbcpCM4Filled.ser
 sudo cp $INSTALL_DIR/fbcpCM4FilledNoSleep.service /lib/systemd/system/fbcpCM4FilledNoSleep.service
 sudo cp $INSTALL_DIR/fbcpOld.service /lib/systemd/system/fbcpOld.service
 
+# this doesn't look right, it is by default setting the newly installed drivers to disabled and setting the old method to enabled.
 sudo systemctl disable fbcpCM4Filled.service
 sudo systemctl disable fbcpCM4FilledNoSleep.service
 sudo update-rc.d fbcp.sh disable
